@@ -1,0 +1,49 @@
++----------------------------+
+|     Mobile Application     |
+|----------------------------|
+| - Audio Record/Upload      |
+| - Playback & UI            |
+| - Dialect Selection        |
+| - Upload to Firebase       |
+| - Display Transcription    |
++-------------+--------------+
+              |
+              v
++----------------------------+
+|     Firebase Services      |
+|----------------------------|
+| - Authentication           |
+| - Firestore (Metadata)     |
+| - Storage (Audio Files)    |
++-------------+--------------+
+              |
+              v
++-----------------------------------------------+
+|           Transcription Routing Layer          |
+|-----------------------------------------------|
+| Based on selected dialect, route to:           |
+| - Custom Whisper API (Kedah / Kelantan)        |
+| - Mesolitica API (Standard Malay / fallback)   |
++-------------+--------------+------------------+
+              |                              |
+              v                              v
++----------------------------+     +----------------------------+
+| Custom Whisper API Server  |     |   Mesolitica API Endpoint  |
+|----------------------------|     |----------------------------|
+| - FastAPI backend          |     | - Hosted ASR service       |
+| - Whisper-small fine-tuned |     | - RESTful API              |
++-------------+--------------+     +-------------+--------------+
+              \                              /
+               \                            /
+                v                          v
+         +----------------------------+
+         |  Transcription Response     |
+         | - JSON with transcript text |
+         +-------------+--------------+
+                       |
+                       v
+         +----------------------------+
+         | Mobile App UI (Display)    |
+         | - Show result in correct   |
+         |   section with metadata    |
+         +----------------------------+

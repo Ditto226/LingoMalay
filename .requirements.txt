@@ -1,0 +1,21 @@
+# PyTorch + Audio (CUDA 11.8 build)
+torch==2.2.2
+torchaudio==2.2.2
+torchvision==0.17.2+cu118
+# Required for above
+--find-links https://download.pytorch.org/whl/torch_stable.html
+
+# HuggingFace stack
+transformers==4.39.3
+datasets==2.19.1
+accelerate==0.28.0
+huggingface_hub>=0.28.1
+
+# Audio + numerical tools
+librosa==0.10.1
+scipy==1.11.4
+soundfile==0.12.1
+numpy==1.24.4
+
+# JSONL support
+jsonlines==4.0.0
