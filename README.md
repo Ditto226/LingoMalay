@@ -2,3 +2,6 @@ LingoMalay is a mobile application developed using Flutter that enables users to
 
 The project was built for research purposes to explore dialect-sensitive transcription and is integrated with Firebase for authentication, data storage, and real-time updates.
 
+Link for the report and app apk:
+https://drive.google.com/drive/folders/1pZC3Z7EewRsrIU2zEP2wW10Uui-lGyRC?usp=sharing
+
