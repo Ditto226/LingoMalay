@@ -20,21 +20,11 @@ Built for research purposes, this project explores dialect-sensitive Automatic S
 Based on the project's architecture, the repository is organized into the following key modules:
 
 ```text
-├── App/                             # Flutter Mobile Application
-│   ├── android/, ios/, web/         # Native platform configurations
-│   ├── assets/                      # Global assets (icons, placeholder audio, etc.)
-│   └── lib/                      
-│        ├── models/                 # Data structures 
-│        ├── provider/               # State management 
-│        ├── routes/                 # App navigation mapping
-│        ├── screens/                # UI Views 
-│        ├── themes/                 # App styling and color palettes
-│        ├── utils/                  # Helper functions
-│        ├── widgets/                # Reusable UI components
-│        ├── firebase_options.dart               
-│        └── main.dart            
 └── Models_Transcribe/   
-    ├── API/                        # Core backend API services and endpointsand server deployment configurations sent to Google Cloud (GDC)
-    ├── Model/                      # Fine-tuned Whisper model checkpoints
+    ├── API/                        # Core backend API services and server deployment configurations sent to Google Cloud (GDC) along with the model architecture
     ├── Dataset/                    # Specialized audio datasets
     └── NoteBook/                   # Jupyter Notebooks used for model training, evaluation, and inference testing
+```
+
+You can view this project report and apk here:
+https://drive.google.com/drive/u/0/folders/1pZC3Z7EewRsrIU2zEP2wW10Uui-lGyRC
