@@ -24,13 +24,13 @@ Based on the project's architecture, the repository is organized into the follow
 │   ├── Kedah/                  # Server deployment configurations sent to Google Cloud (GDC) for Kedah dialect
 │   └── Kelantan/               # Server deployment configurations sent to Google Cloud (GDC) for Kelantan dialect
 ├── Model/        
-│   ├── Kedah/                  # Fine-tuned Whisper model checkpoints and specialized audio datasets
-│   └── Kelantan/               # Fine-tuned Whisper model checkpoints and specialized audio datasets
+│   ├── Kedah/                  # Fine-tuned Whisper model checkpoints
+│   └── Kelantan/               # Fine-tuned Whisper model checkpoints 
 ├── Dataset/        
-│   ├── Kedah/                  # Fine-tuned Whisper model checkpoints and specialized audio datasets
-│   └── Kelantan/
+│   ├── Kedah/                  # Specialized audio datasets
+│   └── Kelantan/               # Specialized audio datasets
 └── NoteBook/                
-    ├── Train.ipynb                 # Jupyter Notebooks used for model training
-    ├── Evaluation.ipynb                  # Jupyter Notebooks used for model evaluation, and inference testing
-    └── Inference.ipynb                  # Jupyter Notebooks used for model evaluation, and inference testing
+    ├── Train.ipynb             # Jupyter Notebooks used for model training
+    ├── Evaluation.ipynb        # Jupyter Notebooks used for model evaluation, and inference testing
+    └── Inference.ipynb         # Jupyter Notebooks used for model evaluation, and inference testing
 
