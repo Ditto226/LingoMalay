@@ -15,6 +15,60 @@ Built for research purposes, this project explores dialect-sensitive Automatic S
 
 ---
 
+## 🛠️ System Architecture
+
+```text
++----------------------------+
+|     Mobile Application     |
+|----------------------------|
+| - Audio Record/Upload      |
+| - Playback & UI            |
+| - Dialect Selection        |
+| - Upload to Firebase       |
+| - Display Transcription    |
++-------------+--------------+
+              |
+              v
++----------------------------+
+|     Firebase Services      |
+|----------------------------|
+| - Authentication           |
+| - Firestore (Metadata)     |
+| - Storage (Audio Files)    |
++-------------+--------------+
+              |
+              v
++-----------------------------------------------+
+|           Transcription Routing Layer          |
+|-----------------------------------------------|
+| Based on selected dialect, route to:           |
+| - Custom Whisper API (Kedah / Kelantan)        |
+| - Mesolitica API (Standard Malay / fallback)   |
++-------------+--------------+------------------+
+              |                              |
+              v                              v
++----------------------------+     +----------------------------+
+| Custom Whisper API Server  |     |   Mesolitica API Endpoint  |
+|----------------------------|     |----------------------------|
+| - FastAPI backend          |     | - Hosted ASR service       |
+| - Whisper-small fine-tuned |     | - RESTful API              |
++-------------+--------------+     +-------------+--------------+
+              \                              /
+               \                            /
+                v                          v
+         +----------------------------+
+         |  Transcription Response     |
+         | - JSON with transcript text |
+         +-------------+--------------+
+                       |
+                       v
+         +----------------------------+
+         | Mobile App UI (Display)    |
+         | - Show result in correct   |
+         |   section with metadata    |
+         +----------------------------+
+```
+
 ## 📁 Repository Structure
 
 Based on the project's architecture, the repository is organized into the following key modules:
@@ -22,9 +76,16 @@ Based on the project's architecture, the repository is organized into the follow
 ```text
 └── Models_Transcribe/   
     ├── API/                        # Core backend API services and server deployment configurations sent to Google Cloud (GDC) along with the model architecture
-    ├── Dataset/                    # Specialized audio datasets
+    ├── Dataset/                    # Specialized dialect audio datasets
     └── NoteBook/                   # Jupyter Notebooks used for model training, evaluation, and inference testing
 ```
 
-You can view this project report and apk here:
-https://drive.google.com/drive/u/0/folders/1pZC3Z7EewRsrIU2zEP2wW10Uui-lGyRC
+📦 Deliverables & Testing
+Because the mobile application codebase is exceptionally large, the pre-built application binary and the comprehensive research project report are hosted externally:
+
+📄 [Read the Full Project Report](https://drive.google.com/drive/u/0/folders/1pZC3Z7EewRsrIU2zEP2wW10Uui-lGyRC
+)
+
+📱 [Download the LingoMalay APK](https://drive.google.com/drive/u/0/folders/1pZC3Z7EewRsrIU2zEP2wW10Uui-lGyRC
+)
+
