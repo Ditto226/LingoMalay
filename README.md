@@ -81,6 +81,7 @@ Based on the project's architecture, the repository is organized into the follow
 ```
 
 📦 Deliverables & Testing
+
 Because the mobile application codebase is exceptionally large, the pre-built application binary and the comprehensive research project report are hosted externally:
 
 📄 [Read the Full Project Report](https://drive.google.com/drive/u/0/folders/1pZC3Z7EewRsrIU2zEP2wW10Uui-lGyRC
