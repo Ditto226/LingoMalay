@@ -20,17 +20,19 @@ Built for research purposes, this project explores dialect-sensitive Automatic S
 Based on the project's architecture, the repository is organized into the following key modules:
 
 ```text
-├── API/                        # Core backend API services and endpoints
-│   ├── Kedah/                  # Server deployment configurations sent to Google Cloud (GDC) for Kedah dialect
-│   └── Kelantan/               # Server deployment configurations sent to Google Cloud (GDC) for Kelantan dialect
-├── Model/        
-│   ├── Kedah/                  # Fine-tuned Whisper model checkpoints
-│   └── Kelantan/               # Fine-tuned Whisper model checkpoints 
-├── Dataset/        
-│   ├── Kedah/                  # Specialized audio datasets
-│   └── Kelantan/               # Specialized audio datasets
-└── NoteBook/                
-    ├── Train.ipynb             # Jupyter Notebooks used for model training
-    ├── Evaluation.ipynb        # Jupyter Notebooks used for model evaluation, and inference testing
-    └── Inference.ipynb         # Jupyter Notebooks used for model evaluation, and inference testing
-
+├── App
+|   ├── lib/                      
+|        ├── models/            
+|        ├── provider/              
+|        ├── routes/                    
+|        ├── screens/                   
+|        ├── themes/                    
+|        ├── utils/                   
+|        ├── widgets/                   
+|        ├── firebase_options.dart               
+|        └── main.dart                    
+└── Models_Transcribe/   
+    ├── API/                        # Core backend API services and endpointsand server deployment configurations sent to Google Cloud (GDC)
+    ├── Model/                      # Fine-tuned Whisper model checkpoints
+    ├── Dataset/                    # Specialized audio datasets
+    └── NoteBook/                   # Jupyter Notebooks used for model training, evaluation, and inference testing
