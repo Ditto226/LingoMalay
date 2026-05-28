@@ -80,7 +80,7 @@ Based on the project's architecture, the repository is organized into the follow
     └── NoteBook/                   # Jupyter Notebooks used for model training, evaluation, and inference testing
 ```
 
-##📦 Deliverables & Testing
+## 📦 Deliverables & Testing
 
 Because the mobile application codebase is exceptionally large, the pre-built application binary and the comprehensive research project report are hosted externally:
 
